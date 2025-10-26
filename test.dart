@@ -1,15 +1,19 @@
 //function that returns true if the number is even and false if odd .
-even(int number) {
-  if (number % 2 == 0) {
-    return "true";
+ddd(int number) {
+  if (number > 0) {
+    return "positive+";
+  } else if (number < 0) {
+    return "negative";
+  } else if (number == 0) {
+    return "zero";
   } else {
-    return "false";
+    return "invalid";
   }
 }
 
 void main() {
-  print(even(5));
-  print(even(6));
-  print(even(10));
-  print(even(5));
+  print(ddd(5));
+  print(ddd(-6));
+  print(ddd(0));
+  print(ddd(-0));
 }
