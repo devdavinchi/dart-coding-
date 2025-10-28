@@ -1,12 +1,6 @@
-//making any type nullable
-//learniing null type
-//null safety
-//nullable datatype
+//more about null safety
 
 void main() {
-  String? name = null;
-
-  print(name);
-  name = "foo";
-  print(name);
+  List<String?> items = ["food", "pajama"];
+  print(items[0]);
 }
