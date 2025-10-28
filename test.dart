@@ -1,6 +1,7 @@
-//more about null safety
+/////////dart emunerations
 
-void main() {
-  List<String?> items = ["food", "pajama"];
-  print(items[0]);
+enum Check { firstName }
+
+void test() {
+  print(Check.firstName);
 }
