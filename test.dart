@@ -1,7 +1,11 @@
 /////////dart emunerations
+///
+enum Check { firstNaame }
 
-enum Check { firstName }
+void main() {
+  void test() {
+    print(Check.firstNaame);
+  }
 
-void test() {
-  print(Check.firstName);
+  test();
 }
