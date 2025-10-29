@@ -2,13 +2,16 @@
 
 class Person {
   String name;
+  int age;
 
-  Person({this.name = "Unknown"});
+  Person(this.name, this.age);
+}
+
+void test() {
+  var person = Person("Dev Rai", 19);
+  print("My name is ${person.name} and I am ${person.age} years old. ");
 }
 
 void main() {
-  final person = Person(name: "dev");
-  print(person.name);
-  final person2 = Person();
-  print(person2.name);
+  test();
 }
