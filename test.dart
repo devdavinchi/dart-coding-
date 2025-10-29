@@ -1,20 +1,14 @@
-//classes
-//objects
+//learning of this keyword for constructor
 
-class person {
-  final String name;
+class Person {
+  String name;
 
-  person(this.name);
-  void run() {
-    print("running");
-  }
-
-  void stretch() {
-    print("running");
-  }
+  Person({this.name = "Unknown"});
 }
 
 void main() {
-  var people = person("bar");
-  print(people.name);
+  final person = Person(name: "dev");
+  print(person.name);
+  final person2 = Person();
+  print(person2.name);
 }
