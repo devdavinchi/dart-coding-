@@ -1,23 +1,17 @@
-/////////dart emunerations
-///
-enum Ani { cat, dog, bunny, pup }
+//classes
+//objects
 
-void main() {
-  void test(Ani Animal) {
-    switch (Animal) {
-      case Ani.cat:
-        print("this cat is cattying");
-        break;
-      case Ani.dog:
-        print("this dog is doggying ");
-        break;
-      case Ani.pup:
-        print("this pup is pupping ");
-        break;
-      default:
-        print("unknown animal");
-    }
+class person {
+  void run() {
+    print("running");
   }
 
-  test(Ani.dog);
+  void stretch() {
+    print("running");
+  }
+}
+
+void main() {
+  var people = person();
+  people.run();
 }
