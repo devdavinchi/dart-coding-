@@ -1,19 +1,14 @@
-//inheritence and subclassing
-class Living {
-  void move() {
-    print("living thing is moving ");
-  }
+//factors constructors
 
-  void breathing() {
-    print("living thing breathing");
+class cat {
+  String name;
+  cat(this.name);
+  factory cat.fluff() {
+    return cat("dev rai");
   }
 }
 
-class cat extends Living {}
-
 void main() {
-  var live = Living();
-  live.move();
-  var biralo = cat();
-  biralo.move();
+  var fluffy = cat.fluff();
+  print(fluffy.name);
 }
