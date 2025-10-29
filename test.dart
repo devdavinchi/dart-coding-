@@ -1,17 +1,19 @@
-//learning of this keyword for constructor
+//inheritence and subclassing
+class Living {
+  void move() {
+    print("living thing is moving ");
+  }
 
-class Person {
-  String name;
-  int age;
-
-  Person(this.name, this.age);
+  void breathing() {
+    print("living thing breathing");
+  }
 }
 
-void test() {
-  var person = Person("Dev Rai", 19);
-  print("My name is ${person.name} and I am ${person.age} years old. ");
-}
+class cat extends Living {}
 
 void main() {
-  test();
+  var live = Living();
+  live.move();
+  var biralo = cat();
+  biralo.move();
 }
