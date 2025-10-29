@@ -2,6 +2,9 @@
 //objects
 
 class person {
+  final String name;
+
+  person(this.name);
   void run() {
     print("running");
   }
@@ -12,6 +15,6 @@ class person {
 }
 
 void main() {
-  var people = person();
-  people.run();
+  var people = person("bar");
+  print(people.name);
 }
