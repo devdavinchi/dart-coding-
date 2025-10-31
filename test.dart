@@ -1,20 +1,18 @@
-//future
-//advanced dart
+//streams
+//an asynchronous "pipe" of data
 
-//asynchronous doesnt return immediately
-//synchronous returns immediately
-
-Future<String> ComeInfive() {
-  return Future.delayed(Duration(seconds: 1), () {
-    throw ("this data will come after 1 second.");
+Stream<int> Number() {
+  return Stream.periodic(const Duration(seconds: 1), (value) {
+    return 1;
   });
 }
 
-void main() async {
-  try {
-    String data = await ComeInfive();
-    print(data);
-  } catch (e) {
-    print("error caught: $e");
+void test() async {
+  await for (final value in Number()) {
+    print(value);
   }
+}
+
+void main() {
+  test();
 }
