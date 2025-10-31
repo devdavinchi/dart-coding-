@@ -10,7 +10,7 @@ Future<String> ComeInfive() {
   });
 }
 
-Future<void> main() async {
+void main() async {
   try {
     String data = await ComeInfive();
     print(data);
