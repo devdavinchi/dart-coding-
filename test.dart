@@ -1,14 +1,20 @@
-//factors constructors
+//future
+//advanced dart
 
-class cat {
-  String name;
-  cat(this.name);
-  factory cat.fluff() {
-    return cat("dev rai");
-  }
+//asynchronous doesnt return immediately
+//synchronous returns immediately
+
+Future<String> ComeInfive() {
+  return Future.delayed(Duration(seconds: 1), () {
+    throw ("this data will come after 1 second.");
+  });
 }
 
-void main() {
-  var fluffy = cat.fluff();
-  print(fluffy.name);
+Future<void> main() async {
+  try {
+    String data = await ComeInfive();
+    print(data);
+  } catch (e) {
+    print("error caught: $e");
+  }
 }
