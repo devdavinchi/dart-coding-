@@ -1,14 +1,13 @@
-//streams
-//an asynchronous "pipe" of data
+//generators
 
-Stream<int> Number() {
-  return Stream.periodic(const Duration(seconds: 1), (value) {
-    return 1;
-  });
+Iterable<int> oneTwo() sync* {
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
-void test() async {
-  await for (final value in Number()) {
+void test() {
+  for (final value in oneTwo()) {
     print(value);
   }
 }
